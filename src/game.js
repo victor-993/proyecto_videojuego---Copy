@@ -5,8 +5,8 @@ export class Game extends Phaser.Scene {
     }
   
     preload() {
-      this.load.image('background', './images/background.png');
-      this.load.image('platform', './images/platform.png');
+      this.load.image('background', '/images/background.png');
+      this.load.image('platform', '/images/platform.png');
     }
   
     create() {
