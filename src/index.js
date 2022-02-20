@@ -1,4 +1,4 @@
-import { Game } from './src/game.js';
+import { Game } from './game.js';
 
 const config = {
   type: Phaser.AUTO,
