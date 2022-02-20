@@ -4,6 +4,7 @@
   "description": "Videojuego para la clase de Desarrollo de videojuegos univalle",
   "main": "index.js",
   "scripts": {
+    "build": "webpack --config webpack/prod.js",
     "start": "node servidor.js",
     "dev": "nodemon Servidor.js"
   },
