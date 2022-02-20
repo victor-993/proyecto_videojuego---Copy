@@ -1,8 +1,10 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+const indextInput = './src/index.html';
+const indexOutput = 'index.html';
 
 module.exports = {
-  mode: 'none',
+  mode: 'production',
   entry: './src/index.js',
   output: {
     filename: 'index.js',
@@ -10,12 +12,36 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: 'assets/images/',
+              publicPath: 'assets/images/',
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(mp3)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: 'assets/audio/',
+              publicPath: 'assets/audio/',
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [
     new HTMLWebpackPlugin({
-      filename: 'index.html',
-      template: './src/index.html',
+      filename: indexOutput,
+      template: indextInput,
     }),
   ],
 };
