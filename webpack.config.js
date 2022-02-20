@@ -4,7 +4,7 @@ const indextInput = './src/index.html';
 const indexOutput = 'index.html';
 
 module.exports = {
-  mode: 'none',
+  mode: 'production',
   entry: './src/index.js',
   output: {
     filename: 'index.js',
